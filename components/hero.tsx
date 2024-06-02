@@ -9,9 +9,9 @@ export default function Hero() {
               <img
                 className="h-8 w-auto"
                 src="/logo.svg"
-                alt=""
+                alt="Сыграч"
               />
-              <span className="text-2xl font-medium pl-2">Сыграч</span>
+              <span className="text-2xl font-medium pl-2 text-gray-900">Сыграч</span>
             </a>
           </div>
         </nav>

@@ -8,19 +8,19 @@ import { log } from 'console';
 const audioExamples  = [
   {
     name: 'Оригинал',
-    url: '/sygrach/audio/example.wav'
+    url: '/audio/example.wav'
   },
   {
     name: 'Без барабанов',
-    url: '/sygrach/audio/example.wav'
+    url: '/audio/example.wav'
   },
   {
     name: 'Без вокала',
-    url: '/sygrach/audio/example.wav'
+    url: '/audio/example.wav'
   },
   {
     name: 'Без гитары',
-    url: '/sygrach/audio/example.wav'
+    url: '/audio/example.wav'
   },
 ];
 

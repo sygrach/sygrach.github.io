@@ -8,7 +8,7 @@ export default function Hero() {
             <a href="#" className="-m-1.5 p-1.5 flex items-center justify-center">
               <img
                 className="h-8 w-auto"
-                src="/sygrach/logo.svg"
+                src="/logo.svg"
                 alt=""
               />
               <span className="text-2xl font-medium pl-2">Сыграч</span>

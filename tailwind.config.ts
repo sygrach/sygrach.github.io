@@ -8,7 +8,7 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      'sans': ["UrbanSlavic", "sans-serif"],
+      'sans': ["VividSans-Regular",  "sans-serif"],
     },
     extend: {
       backgroundImage: {

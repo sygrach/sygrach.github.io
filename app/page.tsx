@@ -1,6 +1,6 @@
 import Hero from '@/components/hero';
 import Features from '@/components/features';
-import Examples from  '@/components/examples';
+import Demo from  '@/components/demo';
 import Subscribe from '@/components/subscribe';
 import Footer from  '@/components/footer';
 
@@ -9,7 +9,7 @@ export default function Home() {
     <main>
       <Hero />
       <Features />
-      <Examples />
+      <Demo />
       <Subscribe />
       <Footer />
     </main>

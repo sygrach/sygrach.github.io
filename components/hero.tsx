@@ -30,13 +30,13 @@ export default function Hero() {
             }}
           />
         </div>
-        <div className="mx-auto max-w-4xl py-32 sm:py-48 lg:py-48">
+        <div className="mx-auto max-w-4xl py-32">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              Сделать минусовку для вашей песни{' '}
-              <a href="#" className="font-semibold text-indigo-600">
+              Скоро запускаемся{' '}
+              <a href="#demo" className="font-semibold text-indigo-600 pl-1">
                 <span className="absolute inset-0" aria-hidden="true" />
-                Попробовать <span aria-hidden="true">&rarr;</span>
+                Послушать <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </div>
@@ -45,11 +45,11 @@ export default function Hero() {
               Инструмент извлечения звуковых дорожек с помощью искусственного интеллекта
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Анализируем аудио и разделяем его на отдельные компоненты: вокал, инструменты и ударные.
+              Анализируем аудио и разделяем его на отдельные компоненты: вокал, аккомпонемент, ударные и басс.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="#"
+                href="#subscribe"
                 className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Получить доступ

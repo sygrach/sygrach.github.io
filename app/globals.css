@@ -24,6 +24,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-family: 'VividSans-Regular', sans-serif;
 }
 
 @layer utilities {
@@ -34,10 +35,10 @@ body {
 
 @layer base {
   @font-face {
-    font-family: 'UrbanSlavic';
+    font-family: 'VividSans-Regular';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(../public/fonts/UrbanSlavic.woff2) format('woff2');
+    src: url(../public/fonts/VividSans-Regular.ttf) format('ttf');
   }
 }

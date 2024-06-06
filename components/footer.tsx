@@ -10,7 +10,7 @@ export default function Footer() {
           />
           <span className="text-2xl font-medium pl-2 text-gray-900">Сыграч</span>
         </a>
-        <p className="mt-8 text-gray-600">© 2024 All rights reserved.</p>
+        <p className="mt-8 text-gray-600">© 2024 Все права защищены.</p>
       </div>
     </div>
   )

@@ -23,7 +23,7 @@ export default function Example() {
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <h3 className='max-w-xl text-xl font-semibold mb-8'>Доступно вместе с запуском:</h3>
+          <h3 className='text-gray-900 max-w-xl text-xl font-semibold mb-8'>Доступно вместе с запуском:</h3>
           <ul className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
             <Feature
               name='Выделение отдельных инструментов'
@@ -36,7 +36,7 @@ export default function Example() {
           </ul>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <h3 className='max-w-xl text-xl font-semibold mb-8'>Будет доступно в следующей версии:</h3>
+          <h3 className='text-gray-900 max-w-xl text-xl font-semibold mb-8'>Будет доступно в следующей версии:</h3>
           <ul className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
             <Feature
               name='Дабовление метронома'

@@ -34,8 +34,6 @@ export default function Demo() {
 
   const selectedAudio = DEMO_AUDIO[selectedAudioKey];
 
-  console.log('Demo', selectedAudio);
-
   return (
     <div id="demo" className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">

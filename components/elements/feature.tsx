@@ -11,9 +11,9 @@ const feature:FC<FeatureProps> = ({ name, icon }) => {
   return (
     <li className="flex items-center text-base leading-7 text-gray-900">
       <div className="flex h-10 w-10 mr-4 items-center justify-center rounded-lg bg-indigo-600">
-        <Icon className="h-6 w-6 text-white" aria-hidden="true" />
+        { icon }
       </div>
-      {name}
+      { name }
     </li>
   )
 }

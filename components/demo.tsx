@@ -24,7 +24,7 @@ const DEMO_AUDIO: Record<string, IDemoAudioMap> = {
     url: '/audio/example_without_vocal.mp3'
   },
   accomponiment: {
-    name: 'Аккомпонемент',
+    name: 'Аккомпанемент',
     url: '/audio/example_other.mp3'
   },
 };

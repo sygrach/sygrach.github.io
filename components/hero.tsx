@@ -45,7 +45,7 @@ export default function Hero() {
               Инструмент извлечения звуковых дорожек с помощью искусственного интеллекта
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Анализируем аудио и разделяем его на отдельные компоненты: вокал, аккомпонемент, ударные и басс.
+              Анализируем аудио и разделяем его на отдельные компоненты: вокал, аккомпанемент, ударные и басс.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
@@ -54,7 +54,7 @@ export default function Hero() {
               >
                 Получить доступ
               </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+              <a href="#features" className="text-sm font-semibold leading-6 text-gray-900">
                 Подробнее <span aria-hidden="true">→</span>
               </a>
             </div>

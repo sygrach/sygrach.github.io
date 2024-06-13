@@ -11,12 +11,12 @@ export default function Example() {
   const iconProps: Record<string, string> = { className: "h-6 w-6 text-white", 'aria-hidden': "true" };
   
   return (
-    <div className="bg-white py-8 sm:py-32">
+    <div id="features" className="bg-white py-8 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <p className="text-base font-semibold leading-7 text-indigo-600">Быстро, качественно, удобно</p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Всё, что нужно для работы с музыкой
+            Всё, что нужно, для работы с музыкой
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
             Загрузите mp3-файл и наслаждайтесь результатом
@@ -39,7 +39,7 @@ export default function Example() {
           <h3 className='text-gray-900 max-w-xl text-xl font-semibold mb-8'>Будет доступно в следующей версии:</h3>
           <ul className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
             <Feature
-              name='Дабовление метронома'
+              name='Добавление метронома'
               icon={ <ClockIcon { ...iconProps } />}
             />
             <Feature

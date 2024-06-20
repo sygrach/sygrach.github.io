@@ -1,3 +1,5 @@
+import { Suspense } from 'react';
+
 import Hero from '@/components/hero';
 import Features from '@/components/features';
 import Demo from  '@/components/demo';
@@ -9,7 +11,9 @@ export default function Home() {
     <main>
       <Hero />
       <Features />
-      <Demo />
+      <Suspense>
+        <Demo />
+      </Suspense>
       <Subscribe />
       <Footer />
     </main>

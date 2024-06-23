@@ -16,10 +16,10 @@ export default function Example() {
         <div className="mx-auto max-w-2xl lg:text-center">
           <p className="text-base font-semibold leading-7 text-indigo-600">Быстро, качественно, удобно</p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Всё, что нужно, для работы с музыкой
+            Всё, что нужно, для работы с&nbsp;музыкой
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Загрузите mp3-файл и наслаждайтесь результатом
+            Загрузите mp3-файл и&nbsp;наслаждайтесь результатом
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">

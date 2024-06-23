@@ -5,13 +5,13 @@ export default function Hero() {
       <header className="absolute inset-x-0 top-0 z-50">
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5 flex items-center justify-center">
+            <a href="/" className="-m-1.5 p-1.5 flex items-center justify-center">
               <img
                 className="h-8 w-auto"
                 src="/logo.svg"
                 alt="Сыграч"
               />
-              <span className="text-2xl font-medium pl-2 text-gray-900">Сыграч</span>
+              <span className="text-2xl font-semibold pl-2 text-gray-900">Сыграч</span>
             </a>
           </div>
         </nav>
@@ -42,7 +42,7 @@ export default function Hero() {
           </div>
           <div className="text-center">
             <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Инструмент извлечения звуковых дорожек с помощью искусственного интеллекта
+              Инструмент извлечения звуковых дорожек с&nbsp;помощью искусственного интеллекта
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Анализируем аудио и разделяем его на отдельные компоненты: вокал, аккомпанемент, ударные и басс.

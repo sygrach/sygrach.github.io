@@ -6,9 +6,9 @@ export default function Subscribe() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
           <div className="max-w-7xl lg:max-w-2lg">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Подписаться на Telegram Канал</h2>
+            <h2 className="sm:text-4xl lg:text-3xl font-bold tracking-tight text-white">Подписаться на&nbsp;Telegram Канал</h2>
             <p className="mt-4 text-lg leading-8 text-gray-300">
-              Следите на новостями, чтобы получить доступ к продукту в числе первых пользователей.
+              Следите на&nbsp;новостями, чтобы получить доступ к&nbsp;продукту в&nbsp;числе первых пользователей.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center">
               <a
@@ -20,7 +20,7 @@ export default function Subscribe() {
                 <img
                   src='/tg_sygrach_qrcode.png'
                   alt='QR-код на Telegram канал'
-                  className="w-48 h-48"
+                  className="w-48 h-48 rounded-2xl"
                 />
               </a>
               <a
@@ -38,7 +38,7 @@ export default function Subscribe() {
               <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
                 <CalendarDaysIcon className="h-6 w-6 text-white" aria-hidden="true" />
               </div>
-              <p className="mt-4 font-semibold text-white">Актуальные новости<br /> о новом функционале</p>
+              <p className="mt-4 font-semibold text-white">Актуальные новости<br /> о&nbsp;новом функционале</p>
             </div>
             <div className="flex flex-col items-center justify-center">
               <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">

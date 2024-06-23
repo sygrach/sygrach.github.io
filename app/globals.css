@@ -24,21 +24,10 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  font-family: 'VividSans-Regular', sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
-  }
-}
-
-@layer base {
-  @font-face {
-    font-family: 'VividSans-Regular';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(../public/fonts/VividSans-Regular.ttf) format('ttf');
   }
 }

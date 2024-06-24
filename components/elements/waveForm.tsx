@@ -26,7 +26,7 @@ const WaveForm:FC<WaveFormProps> = ({ url }) => {
   const skeletonClass = isReady ? '' : 'h-28 animate-pulse bg-gray-300 rounded-full w-full';
 
   return (
-    <div className="flex items-center justify-center w-full mt-4 min-h-28">
+    <div className="flex items-center justify-center w-full min-h-28">
       <button type='button' onClick={onClickPlayPause} className="rounded-full bg-indigo-600 p-3 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
         <span className="sr-only">Play/Pause</span>
         {

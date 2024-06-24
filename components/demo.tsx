@@ -7,50 +7,95 @@ import Dropdown from './elements/dropdown';
 
 interface IDemoAudioMap {
   name: string;
-  url: string;
+  textWithout: string;
+  textOnly: string;
+  urlWithout: string;
+  urlOnly: string;
 }
 
+const DEMO_ORIGINAL_URL = '/audio/demo_original.mp3';
+
 const DEMO_AUDIO: Record<string, IDemoAudioMap> = {
-  original: {
-    name: 'Оригинал',
-    url: '/audio/example_original.mp3'
+  vocal: {
+    name: 'Вокал',
+    textWithout: 'Без вокала',
+    textOnly: 'Только вокал',
+    urlWithout: '/audio/demo_vocal_without.mp3',
+    urlOnly: '/audio/demo_vocal_only.mp3'
   },
-  without_drums: {
-    name: 'Без барабанов',
-    url: '/audio/example_without_drums.mp3'
+  drums: {
+    name: 'Барабаны',
+    textWithout: 'Без барабанов',
+    textOnly: 'Только барабаны',
+    urlWithout: '/audio/demo_drums_without.mp3',
+    urlOnly: '/audio/demo_drums_only.mp3'
   },
-  without_vocal: {
-    name: 'Без вокала',
-    url: '/audio/example_without_vocal.mp3'
+  bass: {
+    name: 'Басс',
+    textWithout: 'Без басса',
+    textOnly: 'Только басс',
+    urlWithout: '/audio/demo_bass_without.mp3',
+    urlOnly: '/audio/demo_bass_only.mp3'
+  },
+  drums_and_bass: {
+    name: 'Барабаны и басс',
+    textWithout: 'Без барабанов и басса',
+    textOnly: 'Только барабаны и басс',
+    urlWithout: '/audio/demo_drums_and_bass_without.mp3',
+    urlOnly: '/audio/demo_drums_and_bass_only.mp3'
+  },
+  guitar: {
+    name: 'Гитара',
+    textWithout: 'Без гитары',
+    textOnly: 'Только гитара',
+    urlWithout: '/audio/demo_guitar_without.mp3',
+    urlOnly: '/audio/demo_guitar_only.mp3'
+  },
+  piano: {
+    name: 'Пианино',
+    textWithout: 'Без пианино',
+    textOnly: 'Только пианино',
+    urlWithout: '/audio/demo_piano_without.mp3',
+    urlOnly: '/audio/demo_piano_only.mp3'
   },
   accomponiment: {
     name: 'Аккомпанемент',
-    url: '/audio/example_other.mp3'
-  },
+    textWithout: 'Без аккомпанемента',
+    textOnly: 'Только аккомпанемент',
+    urlWithout: '/audio/demo_accompaniment_without.mp3',
+    urlOnly: '/audio/demo_accompaniment_only.mp3'
+  }
 };
 
 export default function Demo() {
-  const [selectedAudioKey, setSelectedAudioKey] = useState<string>('original');
+  const [selectedAudioKey, setSelectedAudioKey] = useState<string>('vocal');
 
   const selectedAudio = DEMO_AUDIO[selectedAudioKey];
 
   return (
     <div id="demo" className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
+        <div className="mx-auto lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Как это звучит</h2>
-          <p className="mt-2 text-lg leading-8 text-gray-600">
-            В&nbsp;качестве демонстрации представлена композиция<br />Chasing Dreams&nbsp;&mdash; Jim Yosef &amp;&nbsp;Valentina Franco [NCS release]
+          <p className="mt-4 text-lg leading-8 text-gray-600">
+            В&nbsp;качестве демонстрации представлена композиция &laquo;Clarx &amp;&nbsp;Shiah Maisel&nbsp;&mdash; Round N&rsquo; Round&raquo;
           </p>
         </div>
-        <div className="flex items-center flex-col gap-8 mt-20 mx-auto max-w-2xl min-h-28">
+        <div className="flex items-center flex-col gap-8 mt-14 mx-auto max-w-2xl min-h-28">
           <Dropdown
             id="audioDemo"
             selectedValue={ selectedAudio.name }
             items={Object.entries(DEMO_AUDIO).map(([key, value]) => ({ value: key, name: value.name })) }
             onSelect={ nextValue => setSelectedAudioKey(nextValue) }
           />
-          <WaveForm url={ selectedAudio.url } />
+          <div className='w-full grid grid-cols-1 lg:grid-cols-[210px_minmax(0,_1fr)] items-center gap-8'>
+            <p className='min-w-max text-center lg:text-left'>Оригинал</p>
+            <WaveForm url={ DEMO_ORIGINAL_URL } />
+            <p className='min-w-max text-center lg:text-left'>{ selectedAudio.textWithout }</p>
+            <WaveForm url={ selectedAudio.urlWithout } />
+            <p className='min-w-max text-center lg:text-left'>{ selectedAudio.textOnly }</p>
+            <WaveForm url={ selectedAudio.urlOnly } />
+          </div>
         </div>
       </div>
     </div>

@@ -11,7 +11,6 @@ export default function Hero() {
                 src="/logo_sygrach.png"
                 alt="Сыграч"
               />
-              <span className="hidden text-2xl font-semibold pl-2 text-gray-900">Сыграч</span>
             </a>
           </div>
         </nav>

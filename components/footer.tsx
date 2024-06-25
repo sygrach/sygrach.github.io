@@ -4,11 +4,10 @@ export default function Footer() {
       <div className="flex flex-col justify-center items-center px-6 lg:px-8">
         <a href="#" className="-m-1.5 p-1.5 flex items-center justify-center">
           <img
-            className="h-8 w-auto"
-            src="/logo.svg"
-            alt=""
+            className="h-10 w-auto"
+            src="/logo_sygrach.png"
+            alt="Сыграч"
           />
-          <span className="text-2xl font-semibold pl-2 text-gray-900">Сыграч</span>
         </a>
         <p className="mt-8 text-gray-600">© 2024 Все права защищены.</p>
       </div>

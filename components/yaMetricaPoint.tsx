@@ -4,7 +4,7 @@ const YaMetricaPoint: FC = () => {
   return (
     <noscript>
       <div>
-        <img src="https://mc.yandex.ru/watch/97627984" style={{ position:'absolute', left:'-9999px' }} alt="" />
+        <img src="https://mc.yandex.ru/watch/97669897" style={{ position:'absolute', left:'-9999px' }} alt="" />
       </div>
     </noscript>
   );

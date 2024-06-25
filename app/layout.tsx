@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     ]
   },
   verification: {
-    yandex: "d8e89cdb2288a06c"
+    yandex: "cf7c7e4d25d2b45d"
   }
 };
 

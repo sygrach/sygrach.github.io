@@ -7,11 +7,11 @@ export default function Hero() {
           <div className="flex lg:flex-1">
             <a href="/" className="-m-1.5 p-1.5 flex items-center justify-center">
               <img
-                className="h-8 w-auto"
-                src="/logo.svg"
+                className="h-10 w-auto"
+                src="/logo_sygrach.png"
                 alt="Сыграч"
               />
-              <span className="text-2xl font-semibold pl-2 text-gray-900">Сыграч</span>
+              <span className="hidden text-2xl font-semibold pl-2 text-gray-900">Сыграч</span>
             </a>
           </div>
         </nav>

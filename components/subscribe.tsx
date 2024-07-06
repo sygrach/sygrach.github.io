@@ -8,11 +8,10 @@ export default function Subscribe() {
           <div className="max-w-7xl lg:max-w-2lg">
             <h2 className="sm:text-4xl lg:text-3xl font-bold tracking-tight text-white">Подписаться на&nbsp;Telegram Канал</h2>
             <p className="mt-4 text-lg leading-8 text-gray-300">
-              Следите на&nbsp;новостями, чтобы получить доступ к&nbsp;продукту в&nbsp;числе первых пользователей.
+              Следите за&nbsp;последними новостями и обновлениями.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center">
               <a
-                rel="noreferrer noopener"
                 target="_blank"
                 href="https://t.me/sygrach"
                 className="w-54 h-54 rounded-2xl bg-white"

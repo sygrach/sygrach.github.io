@@ -1,8 +1,8 @@
 import {
   Square3Stack3DIcon,
   MinusCircleIcon,
-  ClockIcon,
-  AdjustmentsVerticalIcon
+  AdjustmentsVerticalIcon,
+  ArrowUpTrayIcon
 } from '@heroicons/react/24/outline'
 
 import Feature from './elements/feature';
@@ -23,30 +23,28 @@ export default function Example() {
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <h3 className='text-gray-900 max-w-xl text-xl font-semibold mb-8'>Доступно вместе с запуском:</h3>
-          <ul className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
             <Feature
               name='Выделение отдельных инструментов'
               icon={ <Square3Stack3DIcon { ...iconProps } /> }
+              description="Выделить из песни вокал, аккомпанемент, гитару, ударные, пианино или бас. Послушайте отдельно от трека, можно использовать для музыкальных занятий."
             />
             <Feature
               name='Удаление выбранного инструмента'
               icon={ <MinusCircleIcon  { ...iconProps } /> }
-            />
-          </ul>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <h3 className='text-gray-900 max-w-xl text-xl font-semibold mb-8'>Будет доступно в следующей версии:</h3>
-          <ul className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-            <Feature
-              name='Добавление метронома'
-              icon={ <ClockIcon { ...iconProps } />}
+              description="Создать минусовку или версию песни для караоке без вокала. Получить трек без выбранного инструмента (гитары, ударных, пианино или баса)."
             />
             <Feature
               name='Изменение тональности'
               icon={ <AdjustmentsVerticalIcon { ...iconProps } />}
+              description="Повысить или понизить тональность песни. Настройте тональность под свой голос."
             />
-          </ul>
+            <Feature
+              name='Загрузка собственного трека'
+              icon={ <ArrowUpTrayIcon { ...iconProps } />}
+              description={ <>Обработайте любую песню, отправив <span className="text-nowrap">mp3-файл</span></> }
+            />
+          </dl>
         </div>
       </div>
     </div>

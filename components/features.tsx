@@ -42,7 +42,7 @@ export default function Example() {
             <Feature
               name='Загрузка собственного трека'
               icon={ <ArrowUpTrayIcon { ...iconProps } />}
-              description={ <>Обработайте любую песню, отправив <span className="text-nowrap">mp3-файл</span></> }
+              description={ <>Обработать любую песню, отправив <span className="text-nowrap">mp3-файл</span>. Можно отправить свой трек, недоступный в интернете.</> }
             />
           </dl>
         </div>

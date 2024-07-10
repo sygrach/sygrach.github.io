@@ -2,7 +2,9 @@ import {
   Square3Stack3DIcon,
   MinusCircleIcon,
   AdjustmentsVerticalIcon,
-  ArrowUpTrayIcon
+  ClockIcon,
+  ArrowUpTrayIcon,
+  VideoCameraIcon
 } from '@heroicons/react/24/outline'
 
 import Feature from './elements/feature';
@@ -41,7 +43,7 @@ export default function Example() {
             />
             <Feature
               name='Добавление метронома'
-              icon={ <ArrowUpTrayIcon { ...iconProps } />}
+              icon={ <ClockIcon { ...iconProps } />}
               description={ <>Наложить метроном на трек. Создадим две версии: песня с метрономом и песня с затактом. Подходит для обучения и отработки.</> }
             />
             <Feature
@@ -51,7 +53,7 @@ export default function Example() {
             />
             <Feature
               name='Обработка трека по ссылке на Youtube'
-              icon={ <ArrowUpTrayIcon { ...iconProps } />}
+              icon={ <VideoCameraIcon { ...iconProps } />}
               description={ <>Быстро обработать музыку. Пришлите ссылку на Youtube видео, чтобы выделить инструмент или создать минусовку по Youtube клипу.</> }
             />
           </dl>

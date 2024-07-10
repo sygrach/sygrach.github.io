@@ -3,7 +3,7 @@ import { MusicalNoteIcon, ComputerDesktopIcon, DevicePhoneMobileIcon} from '@her
 const features = [
   {
     name: 'Ваши аудиозаписи.',
-    description: 'Загружайте свои mp3-файлы или пересылайте аудио из сообщений. Результатом можно быстро поделиться с друзьями.',
+    description: 'Загружайте свои mp3-файлы, пересылайте аудио из сообщений или присылайте ссылку на Youtube. Результатом можно быстро поделиться с друзьями.',
     icon: MusicalNoteIcon,
   },
   {

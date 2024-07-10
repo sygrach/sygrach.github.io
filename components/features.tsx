@@ -19,7 +19,7 @@ export default function Example() {
             Всё, что нужно, для работы с&nbsp;музыкой
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Загрузите mp3-файл и&nbsp;наслаждайтесь результатом
+            Загрузите mp3-файл или отправьте ссылку и&nbsp;наслаждайтесь результатом
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -40,9 +40,19 @@ export default function Example() {
               description="Повысить или понизить тональность песни. Настройте тональность под свой голос."
             />
             <Feature
+              name='Добавление метронома'
+              icon={ <ArrowUpTrayIcon { ...iconProps } />}
+              description={ <>Наложить метроном на трек. Создадим две версии: песня с метрономом и песня с затактом. Подходит для обучения и отработки.</> }
+            />
+            <Feature
               name='Загрузка собственного трека'
               icon={ <ArrowUpTrayIcon { ...iconProps } />}
               description={ <>Обработать любую песню, отправив <span className="text-nowrap">mp3-файл</span>. Можно отправить свой трек, недоступный в интернете.</> }
+            />
+            <Feature
+              name='Обработка трека по ссылке на Youtube'
+              icon={ <ArrowUpTrayIcon { ...iconProps } />}
+              description={ <>Быстро обработать музыку. Пришлите ссылку на Youtube видео, чтобы выделить инструмент или создать минусовку по Youtube клипу.</> }
             />
           </dl>
         </div>

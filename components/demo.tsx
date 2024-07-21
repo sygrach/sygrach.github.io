@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import WaveForm from './elements/waveForm';
 import Dropdown from './elements/dropdown';
@@ -15,7 +15,7 @@ interface IDemoAudioMap {
 
 const DEMO_ORIGINAL_URL = '/audio/demo_original.mp3';
 
-const DEMO_AUDIO: Record<string, IDemoAudioMap> = {
+const DEMO_AUDIO_BY_TYPE: Record<string, IDemoAudioMap> = {
   vocal: {
     name: 'Вокал',
     textWithout: 'Без вокала',
@@ -68,9 +68,19 @@ const DEMO_AUDIO: Record<string, IDemoAudioMap> = {
 };
 
 export default function Demo() {
-  const [selectedAudioKey, setSelectedAudioKey] = useState<string>('vocal');
+  const [selectedType, setSelectedType] = useState<string>('vocal');
+  const [playingAudio, setPlayingAudio] = useState<string | null>(null);
 
-  const selectedAudio = DEMO_AUDIO[selectedAudioKey];
+  const selectedAudio = DEMO_AUDIO_BY_TYPE[selectedType];
+
+  const onPlayPause = (audio: string) => () => {
+    setPlayingAudio((prevAudio: string | null) => prevAudio === audio ? null : audio);
+  };
+
+  const onChangeAudioType = (nextType: string) => {
+    setSelectedType(nextType);
+    setPlayingAudio((prevAudio: string | null) => prevAudio === 'original' ? 'original' : null);
+  };
 
   return (
     <div id="demo" className="bg-white py-24 sm:py-32">
@@ -85,16 +95,16 @@ export default function Demo() {
           <Dropdown
             id="audioDemo"
             selectedValue={ selectedAudio.name }
-            items={Object.entries(DEMO_AUDIO).map(([key, value]) => ({ value: key, name: value.name })) }
-            onSelect={ nextValue => setSelectedAudioKey(nextValue) }
+            items={ Object.entries(DEMO_AUDIO_BY_TYPE).map(([key, value]) => ({ value: key, name: value.name })) }
+            onSelect={ onChangeAudioType }
           />
           <div className='w-full grid grid-cols-1 lg:grid-cols-[210px_minmax(0,_1fr)] items-center gap-8'>
             <p className='min-w-max text-center lg:text-left'>Оригинал</p>
-            <WaveForm url={ DEMO_ORIGINAL_URL } />
+            <WaveForm url={ DEMO_ORIGINAL_URL } playing={ playingAudio === 'original' } onPlayPause={ onPlayPause('original') } />
             <p className='min-w-max text-center lg:text-left'>{ selectedAudio.textWithout }</p>
-            <WaveForm url={ selectedAudio.urlWithout } />
+            <WaveForm url={ selectedAudio.urlWithout } playing={ playingAudio === 'urlWithout' } onPlayPause={ onPlayPause('urlWithout') }  />
             <p className='min-w-max text-center lg:text-left'>{ selectedAudio.textOnly }</p>
-            <WaveForm url={ selectedAudio.urlOnly } />
+            <WaveForm url={ selectedAudio.urlOnly } playing={ playingAudio === 'urlOnly' } onPlayPause={ onPlayPause('urlOnly') } />
           </div>
         </div>
       </div>

@@ -1,12 +1,14 @@
-import { useRef, useCallback, memo, type FC } from 'react';
+import { useRef, useCallback, useEffect, memo, type FC } from 'react';
 import { useWavesurfer } from '@wavesurfer/react'
 import { PlayIcon, PauseIcon } from '@heroicons/react/24/outline'
 
 interface WaveFormProps {
   url: string;
+  playing: boolean;
+  onPlayPause?: () => void;
 }
 
-const WaveForm:FC<WaveFormProps> = ({ url }) => {
+const WaveForm:FC<WaveFormProps> = ({ url, playing = false, onPlayPause }) => {
   const containerRef = useRef(null);
 
   const { wavesurfer, isPlaying, isReady } = useWavesurfer({
@@ -19,8 +21,12 @@ const WaveForm:FC<WaveFormProps> = ({ url }) => {
     url
   });
 
-  const onClickPlayPause = useCallback(() => {
+  useEffect(() => {
     wavesurfer && wavesurfer.playPause();
+  }, [playing]);
+
+  const onClickPlayPause = useCallback(() => {
+    onPlayPause && onPlayPause();
   }, [wavesurfer]);
 
   const skeletonClass = isReady ? '' : 'h-28 animate-pulse bg-gray-300 rounded-full w-full';
@@ -30,7 +36,7 @@ const WaveForm:FC<WaveFormProps> = ({ url }) => {
       <button type='button' onClick={onClickPlayPause} className="rounded-full bg-indigo-600 p-3 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
         <span className="sr-only">Play/Pause</span>
         {
-          isPlaying
+          playing
             ? <PauseIcon className="h-6 w-6" aria-hidden="true"/>
             : <PlayIcon className="h-6 w-6" aria-hidden="true"/>
         }

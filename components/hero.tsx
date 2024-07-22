@@ -1,4 +1,3 @@
-
 export default function Hero() {
   return (
     <div className="bg-white">
@@ -76,7 +75,14 @@ export default function Hero() {
               <div className="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[178px] rounded-s-lg"></div>
               <div className="h-[64px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
               <div className="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-gray-800">
-                  <img src="/demo_1.png" className="w-[272px] h-[572px]" alt="Демонстрация Telegram бота Сыграч" />
+                  <picture>
+                    <source srcSet="/demo_1.webp" type="image/webp" />
+                    <img
+                      className="w-[272px] h-[572px]"
+                      src="/demo_1.png"
+                      alt="Демонстрация Telegram бота Сыграч"
+                    />
+                  </picture>
               </div>
           </div>
         </div>

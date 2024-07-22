@@ -52,6 +52,7 @@ export default function RootLayout({
     <html lang="ru" className={ font.className }>
       <head>
         { IS_PROD ? <YaMetricaScript /> : null }
+        <link rel="preload" href="/demo_1.webp" as="image" type="image/webp" />
       </head>
       <body>
         { children }

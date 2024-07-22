@@ -1,4 +1,4 @@
-import { MusicalNoteIcon, ComputerDesktopIcon, DevicePhoneMobileIcon} from '@heroicons/react/20/solid'
+import { MusicalNoteIcon, ComputerDesktopIcon, DevicePhoneMobileIcon} from '@heroicons/react/20/solid';
 
 const features = [
   {
@@ -41,13 +41,16 @@ const Bot = () => {
             </dl>
 
           </div>
-          <img
-            alt="Скриншот Telegram бота"
-            src="/demo_2.png"
-            width={2134}
-            height={1798}
-            className="w-[32rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[50rem] md:-ml-4 lg:-ml-0"
-          />
+          <picture>
+            <source srcSet="/demo_2.webp" type="image/webp" />
+            <img
+              className="w-[32rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[50rem] md:-ml-4 lg:-ml-0"
+              src="/demo_2.png"
+              alt="Демонстрация Telegram бота Сыграч"
+              width={2134}
+              height={1798}
+            />
+          </picture>
         </div>
       </div>
     </div>
